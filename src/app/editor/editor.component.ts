@@ -36,6 +36,6 @@ export class EditorComponent implements OnInit {
     this.editor.setMarkdown("```javascript\nconsole.log('xxx');\n```")
   }
   onSubmit() {
-    alert('Thanks!' + this.editor.getMarkdown());
+    alert('Thanks!' + this.editor.getHtml());
   }
 }

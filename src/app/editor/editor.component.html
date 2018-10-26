@@ -1,21 +1,14 @@
 <form [formGroup]="editorForm" novalidate (ngSubmit)="editorForm.valid?onSubmit():''">
   <mat-card class="shipping-card">
     <mat-card-header>
-      <mat-card-title>编辑</mat-card-title>
+      <mat-card-title>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="标题" formControlName="title" required>
+        </mat-form-field>
+      </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <div class="row">
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input matInput placeholder="标题" formControlName="title" required>
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div id="editSection"></div>
-        </div>
-      </div>
+      <div id="editSection"></div>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" type="submit">保存</button>
